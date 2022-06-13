@@ -9,7 +9,7 @@
     "sass": "1.52.3"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass --whatch sass.scss sass.css"
   },
   "repository": {
     "type": "git",
