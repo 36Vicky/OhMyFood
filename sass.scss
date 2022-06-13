@@ -2,7 +2,7 @@
 ::before,
 ::after {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -13,7 +13,7 @@ body {
 header {
   font-family: 'Shrikhand', cursive;
   -webkit-box-shadow: 2px 2px 2px 2px #dfdbdb;
-  box-shadow: 2px 2px 2px 2px #dfdbdb;
+          box-shadow: 2px 2px 2px 2px #dfdbdb;
   text-align: center;
   padding: 0.3rem;
   margin: 0;
@@ -24,10 +24,12 @@ main .ville {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-
-  align-items: center;
-
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 1rem;
   background-color: #f3f3f3;
   text-align: center;
@@ -59,8 +61,8 @@ main .ville i {
   padding: 1rem 2rem;
   border: none;
   border-radius: 2rem;
-
-  box-shadow: 2px 1px 8px -3px #000000;
+  -webkit-box-shadow: 2px 1px 8px -3px #000000;
+          box-shadow: 2px 1px 8px -3px #000000;
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(147, 86, 220, 0.9)), to(rgba(255, 121, 218, 0.9)));
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   -webkit-transition: all 200ms;
@@ -70,8 +72,7 @@ main .ville i {
 
 .explorer button:hover {
   -webkit-transform: scale(1.02);
-  transform: scale(1.02);
+          transform: scale(1.02);
   opacity: 0.9;
 }
-
 /*# sourceMappingURL=sass.css.map */
