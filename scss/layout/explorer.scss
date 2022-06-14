@@ -1,4 +1,4 @@
-@use "../utils/box-shadow.scss";
+@import "../utils/box-shadow.scss";
 .explorer {
     text-align: center;
   
@@ -20,7 +20,7 @@
     background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
     transition: all 200ms;
     margin-top: 1rem;
-    @include box-shadow.base-shadow;
+    @include base-shadow;
   }
   & button:hover {
     transform: scale(1.02);
