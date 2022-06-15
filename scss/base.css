@@ -1,0 +1,16 @@
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: 'Roboto', sans serif;
+}
+
+main {
+  padding: 0 1rem;
+}
+/*# sourceMappingURL=base.css.map */
