@@ -1,8 +1,10 @@
 @import "../utils/box-shadow.scss";
 @import "../utils/zoom.scss";
 @import "../utils/variables.scss";
+
 .tuto {
     counter-reset: steps;
+    margin-bottom: 2rem;
 
     & ol {
         display: flex;
@@ -27,9 +29,9 @@
             place-items: center;
             border-radius: 50%;
             position: absolute;
-            bottom: $tuto-height;
+            top: 50%;
             left: -1 * $tuto-height;
-
+            transform: translateY(-50%);
         }
 
         list-style-type: none;
