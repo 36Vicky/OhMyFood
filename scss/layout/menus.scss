@@ -2,6 +2,7 @@
 
 .menus {
     background-color: #f6f6f6;
+    margin-bottom: 2rem;
     .menus__cards {
 display: grid;
 grid-template-columns: 1fr 1fr;
@@ -18,13 +19,18 @@ position: relative;
     height: 2rem;
     width: 5rem;
     background-color: #99e2d0;
+    color: darken($color:#99e2d0, $amount: 50%);
+    display: grid;
+    place-items: center;
+    right: 1rem;
+    top: 1rem;
 }
     }
 
    .card {
     &__image {
         height: 15rem;
-        border-radius: 1rem;
+        border-radius: 1rem 1rem 0 0;
         background-size: cover;
     }
     &__image-1 {
@@ -38,6 +44,33 @@ position: relative;
     }
     &__image-4 {
         background-image: url("../../assets/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+    }
+    &__description {
+        position: relative;
+        background-color: white;
+        border-radius: 0 0 1rem 1rem;
+           h3, p {
+             padding-top: 0.3rem;
+        }
+        i {
+            font-size: 2rem;
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .fas {
+            color: transparent;
+            background-image:  linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+            background-clip: text;
+            -webkit-background-clip: text;
+            opacity: 0;
+            transition: all 200ms ease-in-out;
+        }
+        &:hover .fas {
+            opacity: 1;
+            transform: translateY(-50%) scale(1.2);
+        }
     }
    } 
 }

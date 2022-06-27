@@ -1,17 +1,21 @@
 *,
 ::before,
 ::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   margin: 0px;
-  font-family: 'Roboto', sans serif;
+  font-family: "Roboto", sans serif;
 }
 
 main {
   padding: 0 7rem;
+}
+@media (max-width: 1000px) {
+  main {
+    padding: 0 1rem;
+  }
 }
 
 h2 {
@@ -19,10 +23,18 @@ h2 {
   margin: 0;
 }
 
+h3, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 header {
-  font-family: 'Shrikhand', cursive;
-  -webkit-box-shadow: 2px 2px 2px 2px #dfdbdb;
-          box-shadow: 2px 2px 2px 2px #dfdbdb;
+  font-family: "Shrikhand", cursive;
+  box-shadow: 2px 2px 2px 2px #dfdbdb;
   text-align: center;
   padding: 0.3rem;
   margin: 0;
@@ -30,15 +42,9 @@ header {
 }
 
 main .ville {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
   background-color: #f3f3f3;
   text-align: center;
@@ -52,15 +58,12 @@ main .ville i {
 .explorer {
   text-align: center;
 }
-
 .explorer h2 {
   font-size: 2rem;
 }
-
 .explorer p {
   font-size: 1rem;
 }
-
 .explorer button {
   color: white;
   font-weight: 300;
@@ -68,19 +71,14 @@ main .ville i {
   padding: 1rem 2rem;
   border: none;
   border-radius: 2rem;
-  -webkit-box-shadow: 2px 1px 8px -3px #000000;
-          box-shadow: 2px 1px 8px -3px #000000;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(147, 86, 220, 0.9)), to(rgba(255, 121, 218, 0.9)));
+  box-shadow: 2px 1px 8px -3px #000000;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-  -webkit-transition: all 200ms;
   transition: all 200ms;
   margin-top: 1rem;
   box-shadow: 2px 1px 8px -3px #000000;
 }
-
 .explorer button:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+  transform: scale(1.02);
   opacity: 0.9;
 }
 
@@ -88,36 +86,24 @@ main .ville i {
   counter-reset: steps;
   margin-bottom: 2rem;
 }
-
 .tuto ol {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 2rem;
 }
-
 @media (max-width: 1000px) {
   .tuto ol {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
-
 .tuto li {
   position: relative;
   list-style-type: none;
   background-color: #f6f6f6;
   padding: 1.5rem 2rem;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   border-radius: 1rem;
-  -webkit-box-shadow: 2px 1px 8px -3px #000000;
-          box-shadow: 2px 1px 8px -3px #000000;
+  box-shadow: 2px 1px 8px -3px #000000;
 }
-
 .tuto li::before {
   content: counter(steps);
   counter-increment: steps;
@@ -125,22 +111,17 @@ main .ville i {
   background-color: #9356dc;
   width: 2rem;
   height: 2rem;
-  display: -ms-grid;
   display: grid;
   place-items: center;
   border-radius: 50%;
   position: absolute;
   top: 50%;
   left: -1rem;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
-
 .tuto li:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+  transform: scale(1.02);
 }
-
 .tuto li i.fas {
   margin-right: 1rem;
   color: #7e7e7e;
@@ -149,54 +130,86 @@ main .ville i {
 
 .menus {
   background-color: #f6f6f6;
+  margin-bottom: 2rem;
 }
-
 .menus .menus__cards {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
-
 @media (max-width: 1000px) {
   .menus .menus__cards {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
-
 .menus .menus__cards .new {
   position: relative;
 }
-
 .menus .menus__cards .new::before {
   content: "Nouveau";
   position: absolute;
   height: 2rem;
   width: 5rem;
   background-color: #99e2d0;
+  color: #1b6150;
+  display: grid;
+  place-items: center;
+  right: 1rem;
+  top: 1rem;
 }
-
 .menus .card__image {
   height: 15rem;
-  border-radius: 1rem;
+  border-radius: 1rem 1rem 0 0;
   background-size: cover;
 }
-
 .menus .card__image-1 {
   background-image: url("../../assets/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
 }
-
 .menus .card__image-2 {
   background-image: url("../../assets/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
 }
-
 .menus .card__image-3 {
   background-image: url("../../assets/stil-u2Lp8tXIcjw-unsplash.jpg");
 }
-
 .menus .card__image-4 {
   background-image: url("../../assets/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
 }
-/*# sourceMappingURL=sass.css.map */
+.menus .card__description {
+  position: relative;
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
+}
+.menus .card__description h3, .menus .card__description p {
+  padding-top: 0.3rem;
+}
+.menus .card__description i {
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.menus .card__description .fas {
+  color: transparent;
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+}
+.menus .card__description:hover .fas {
+  opacity: 1;
+}
+
+footer {
+  background-color: #353535;
+  padding: 1rem 2rem;
+  color: white;
+}
+footer h2 {
+  font-family: "Shrikhand", "sans serif";
+  font-weight: 500;
+  padding: 1rem 0;
+}
+footer p {
+  padding: 0.2rem;
+}/*# sourceMappingURL=sass.css.map */
