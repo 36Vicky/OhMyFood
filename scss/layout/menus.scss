@@ -1,4 +1,4 @@
-
+@import "../utils/mixing.scss";
 
 .menus {
     background-color: #f6f6f6;
@@ -49,8 +49,8 @@ position: relative;
         position: relative;
         background-color: white;
         border-radius: 0 0 1rem 1rem;
-           h3, p {
-             padding-top: 0.3rem;
+        h3, p {
+            padding: 0.3rem;
         }
         i {
             font-size: 2rem;
@@ -61,12 +61,13 @@ position: relative;
         }
         .fas {
             color: transparent;
-            background-image:  linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
             background-clip: text;
             -webkit-background-clip: text;
             opacity: 0;
-            transition: all 200ms ease-in-out;
+            transition: all 200ms ease-in-out; 
+            background-image:  linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
         }
+       
         &:hover .fas {
             opacity: 1;
             transform: translateY(-50%) scale(1.2);

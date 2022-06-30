@@ -72,10 +72,9 @@ main .ville i {
   border: none;
   border-radius: 2rem;
   box-shadow: 2px 1px 8px -3px #000000;
-  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
   transition: all 200ms;
   margin-top: 1rem;
-  box-shadow: 2px 1px 8px -3px #000000;
 }
 .explorer button:hover {
   transform: scale(1.02);
@@ -195,9 +194,11 @@ main .ville i {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
+  transition: all 200ms ease-in-out;
 }
 .menus .card__description:hover .fas {
   opacity: 1;
+  transform: translateY(-50%) scale(1.2);
 }
 
 footer {
@@ -212,4 +213,31 @@ footer h2 {
 }
 footer p {
   padding: 0.2rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+main h2 {
+  font-family: "Shrikhand", "sans serif";
+  position: relative;
+}
+main h2 i {
+  font-size: 2rem;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+main h2 .fas {
+  color: transparent;
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+main h2:hover .fas {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.2);
 }/*# sourceMappingURL=sass.css.map */
