@@ -1,8 +1,11 @@
+@import "./scss/utils/animations.scss";
+@import "./scss/utils/mixins.scss";
+@import "./scss/utils/variables.scss";
 @import "./scss/base.scss";
 @import "./scss/layout/header.scss";
 @import "./scss/layout/ville.scss";
 @import "./scss/layout/explorer.scss";
 @import "./scss/layout/tuto.scss";
 @import "./scss/layout/menus.scss";
-@import "./scss/layout/footer.scsss";
+@import "./scss/layout/footer.scss";
 @import "./scss/pagesrestaurant.scss";

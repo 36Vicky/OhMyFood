@@ -1,0 +1,73 @@
+#homepage .menus {
+  background-color: #f6f6f6;
+  margin-bottom: 2rem;
+}
+#homepage .menus .menus__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+@media (max-width: 1000px) {
+  #homepage .menus .menus__cards {
+    grid-template-columns: 1fr;
+  }
+}
+#homepage .menus .menus__cards .new {
+  position: relative;
+}
+#homepage .menus .menus__cards .new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 2rem;
+  width: 5rem;
+  background-color: #99e2d0;
+  color: #1b6150;
+  display: grid;
+  place-items: center;
+  right: 1rem;
+  top: 1rem;
+}
+#homepage .menus .card__image {
+  height: 15rem;
+  border-radius: 1rem 1rem 0 0;
+  background-size: cover;
+}
+#homepage .menus .card__image-1 {
+  background-image: url("../../assets/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+#homepage .menus .card__image-2 {
+  background-image: url("../../assets/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+#homepage .menus .card__image-3 {
+  background-image: url("../../assets/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+#homepage .menus .card__image-4 {
+  background-image: url("../../assets/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+#homepage .menus .card__description {
+  position: relative;
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
+}
+#homepage .menus .card__description h3, #homepage .menus .card__description p {
+  padding: 0.3rem;
+}
+#homepage .menus .card__description i {
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#homepage .menus .card__description .fas {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+}
+#homepage .menus .card__description:hover .fas {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.2);
+}/*# sourceMappingURL=menus.css.map */
