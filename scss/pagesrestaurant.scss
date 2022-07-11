@@ -7,17 +7,30 @@ body {
 }
 
 #page-resto {
+    header::before {
+        @include fontawesome;
+        content: "\f060";
+       left: 1rem;
+       top: 50%;
+       transform: translateY(-50%);
+       font-size: 20px;
+    }
     .banner img {
         display: block;
         width: 100%;
         height: 70vh;
         object-fit: cover;
         object-position: center bottom;
+        z-index: 1;
+        position: relative;
     }
 
     .resto__titre {
         background-color: #f6f6f6;
         border-radius: 2rem 2rem 0 0;
+        margin-top: -3rem;
+        z-index: 1000;
+        position: relative;
 
         h2 {
             font-family: "Shrikhand", "sans serif";
@@ -39,9 +52,22 @@ body {
         @media (max-width: $breakpoint) {
             grid-template-columns: repeat(1, 1fr);
         }
-
+h3 {
+    text-transform: uppercase;
+    font-weight: 400;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        height: 0.25rem;
+        width: 3rem;
+        background-color: #99e2d0;
+        left: 0;
+        top: 1.5rem;
+    }
+}
         .menus__category {
-            background-color: white;
+            
             overflow: hidden;
 
             h4, p {
@@ -54,12 +80,13 @@ body {
 
             .menu-item {
                 display: flex;
+                background-color: white;
                 overflow: hidden;
                 border-radius: 1rem;
                 white-space: nowrap;
                 text-overflow: ellipsis;
-                box-shadow: 2px 1px 8px -3px #000000;
-                margin: 1rem;
+                box-shadow: 2px 1px 8px -3px #7e7e7e;
+                margin: 0.5rem;
 
                 .prix {
                     margin-left: auto;
@@ -98,6 +125,7 @@ body {
                 }
 
                 &:hover {
+                    cursor: pointer;
                      .menu-item__check {
                     margin-right: 0;
                 }
@@ -108,4 +136,14 @@ body {
         }
     }
 }
+section.order {
+    height: 40vh;
+    display: grid;
+    place-items: center;
+    button {
+        @include button;
+       
+    }
+}
+
 }
