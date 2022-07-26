@@ -117,7 +117,7 @@ main .ville i {
 }
 .explorer button:hover {
   transform: scale(1.02);
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .loader {
@@ -188,12 +188,15 @@ main .ville i {
 }
 .tuto li {
   position: relative;
+  display: flex;
+  align-items: center;
   list-style-type: none;
   background-color: #f6f6f6;
   padding: 1.5rem 2rem;
   flex-grow: 1;
   border-radius: 1rem;
   box-shadow: 2px 1px 8px -3px #000000;
+  margin-right: 2rem;
 }
 .tuto li::before {
   content: counter(steps);
@@ -212,6 +215,10 @@ main .ville i {
 }
 .tuto li:hover {
   transform: scale(1.02);
+  background-color: #f2eafb;
+}
+.tuto li i::before {
+  color: #9356dc;
 }
 .tuto li i.fas {
   margin-right: 1rem;
@@ -515,5 +522,5 @@ body {
 }
 #page-resto section.order button:hover {
   transform: scale(1.02);
-  opacity: 0.9;
+  opacity: 1;
 }/*# sourceMappingURL=sass.css.map */
